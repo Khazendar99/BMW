@@ -68,7 +68,7 @@ a:hover {
 #main-content ul a:hover {
   border-bottom: 2px solid rgb(0, 157, 255);
 }
-#main-content img {
+#main-content nav img {
   width: 60px;
   background-color: rgb(0, 157, 255);
   border-radius: 50%;
@@ -84,7 +84,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
-#main-content h1 {
+#main-content #home h1 {
   position: absolute;
   top: 18%;
   left: 50%;
@@ -119,25 +119,101 @@ section .section-div a {
   background-size: cover;
   background-position: center;
   font-size: 2rem;
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: 0.4s;
 }
 section .section-div a:hover {
   color: red;
   opacity: 1;
+  scale: 1.1;
 }
 #series-1 {
-  background-image: url(./images/car/1.jpg);
+  background-image: url(./midea/images/car/1.jpg);
 }
 #series-3 {
-  background-image: url(./images/car/3.jpg);
+  background-image: url(./midea/images/car/3.jpg);
 }
 #series-5 {
-  background-image: url(./images/car/5.avif);
+  background-image: url(./midea/images/car/5.avif);
 }
 #series-7 {
-  background-image: url(./images/car/7.webp);
+  background-image: url(./midea/images/car/7.webp);
 }
-
+#first-series {
+  background-color: rgb(1, 0, 53);
+}
+#third-series {
+  background-color: rgb(58, 0, 0);
+}
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.main .bmw-section {
+  display: flex;
+  justify-content: space-around;
+}
+.main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 44vh;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  transition: 0.4s;
+  padding: 0px 20px;
+}
+.main p {
+  max-width: 300px;
+  font-size: 1.1rem;
+}
+.main #main-paragraph {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  align-self: center;
+}
+.main section:hover {
+  scale: 1.1;
+}
+.main section div {
+  margin-left: 18px;
+  font-size: 1.1rem;
+}
+.main .first {
+  display: flex;
+  align-items: center;
+}
+.bmw-section h1 {
+  color: red;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.bmw-section img {
+  width: 60%;
+  border-radius: 10px;
+}
+#third-series h1 {
+  color: green;
+}
+#fifth-series {
+  background-color: whitesmoke;
+}
+#fifth-series h1 {
+  color: rgb(0, 117, 252);
+}
+#seventh-series {
+  background-color: black;
+}
+#seventh-series h1 {
+  color: orange;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -146,12 +222,37 @@ section .section-div a:hover {
     transform: rotate(360deg);
   }
 }
+@media (max-width: 900px) {
+  .main .first {
+    flex-direction: column;
+  }
+}
 @media (max-width: 650px) {
-  #main-content h1 {
+  .bmw-section h1 {
+    font-size: 17px;
+  }
+  #main-content #home h1 {
     top: 26%;
   }
   section .section-div a {
     font-size: 1.2rem;
+  }
+  .main .first {
+    flex-direction: column;
+  }
+  .main p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .bmw-section h1 {
+    font-size: 14px;
+  }
+  .main p {
+    font-size: 12px;
+  }
+  .main #main-paragraph {
+    font-size: 22px;
   }
 }
 @media (max-width: 250px) {
